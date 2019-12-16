@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'player',
     loadChildren: './player/player.module#PlayerModule'
+  },
+  {
+    path: 'randevu',
+    loadChildren: './module-160202076/randevu.module#RandevuModule'
   }
 
 ];
