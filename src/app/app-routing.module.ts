@@ -27,6 +27,7 @@ const routes: Routes = [
     path: 'randevu',
     loadChildren: './module-160202076/randevu.module#RandevuModule'
   }
+  
 ];
 
 @NgModule({
