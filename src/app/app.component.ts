@@ -39,6 +39,11 @@ export class AppComponent {
       title: 'İlaç Yaz',
       url: '/prescribe',
       icon: 'calendar'
+    },
+    {
+      title: 'İlaçlarım',
+      url: '/patient-medicine',
+      icon: 'calendar'
     }
   ];
 

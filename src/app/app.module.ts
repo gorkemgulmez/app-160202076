@@ -13,6 +13,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { PortalModule } from './portal/portal.module';
 import { PlayerModule } from "./player/player.module";
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PlayerModule } from "./player/player.module";
     IonicStorageModule.forRoot(),
     HttpClientModule,
     PortalModule,
-    PlayerModule
+    PlayerModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,
