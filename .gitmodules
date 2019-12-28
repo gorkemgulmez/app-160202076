@@ -7,3 +7,6 @@
 [submodule "src/app/module-160202028"]
 	path = src/app/module-160202028
 	url = https://github.com/2019-BLM441/module-160202028
+[submodule "src/app/module-160202025"]
+	path = src/app/module-160202025
+	url = https://www.github.com/2019-BLM441/module-160202025.git
