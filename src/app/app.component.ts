@@ -34,6 +34,16 @@ export class AppComponent {
       title: 'Randevu',
       url: '/randevu',
       icon: 'calendar'
+    },
+    {
+      title: 'İlaç Yaz',
+      url: '/prescribe',
+      icon: 'calendar'
+    },
+    {
+      title: 'İlaçlarım',
+      url: '/patient-medicine',
+      icon: 'calendar'
     }
   ];
 

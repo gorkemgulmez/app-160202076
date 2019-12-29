@@ -40,13 +40,13 @@ export class SQLService {
   async init() {
     this.dbReady = new BehaviorSubject(false);
     if (this.platform.is('android') || this.platform.is('ios')) {
-      console.log('device');
+      //console.log('device');
       this.db = await this.sqlite.create({
         name: DB_NAME,
         location: 'default'
       });
     } else {
-      console.log('browser');
+      //console.log('browser');
       const open = await window.openDatabase(DB_NAME, '1.0', 'Portal DB', 5 * 1024 * 1024);
       this.db = webDB(open);
     }

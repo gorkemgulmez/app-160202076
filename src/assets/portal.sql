@@ -13,3 +13,7 @@ INSERT INTO note (title, note, icon) VALUES ('American Football', 'This item Ame
 INSERT INTO note (title, note, icon) VALUES ('Boat', 'This item Boat', 'boat');
 INSERT INTO note (title, note, icon) VALUES ('Bluetooth', 'This item Bluetooth', 'bluetooth');
 INSERT INTO note (title, note, icon) VALUES ('Build', 'This item Build', 'build');
+CREATE TABLE IF NOT EXISTS medicines (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, medicine_name TEXT, description TEXT);
+INSERT INTO medicines (patient_id, doctor_id, medicine_name, description) VALUES ('1', '1', 'deneme', 'deneme');
+CREATE TABLE IF NOT EXISTS analyzes (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, alaysis_name TEXT, description TEXT);
+INSERT INTO analyzes (patient_id, doctor_id, analysis_name, description) VALUES ('1', '1', 'deneme', 'deneme');
