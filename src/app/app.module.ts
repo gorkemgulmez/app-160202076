@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PortalModule } from './portal/portal.module';
 import { PlayerModule } from "./player/player.module";
 import { ReactiveFormsModule } from '@angular/forms';
+import { RandevuModule } from './module-160202076/randevu.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PortalModule,
     PlayerModule,
     ReactiveFormsModule
+    RandevuModule
   ],
   providers: [
     StatusBar,

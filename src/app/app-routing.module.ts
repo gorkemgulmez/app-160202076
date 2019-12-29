@@ -30,7 +30,10 @@ const routes: Routes = [
   { path: 'prescribe',
     loadChildren: './module-160202053/prescribe/prescribe.module#PrescribePageModule'
   },
-  { path: 'patient-medicine', loadChildren: './module-160202053/patient-medicine/patient-medicine.module#PatientMedicinePageModule' }
+  { path: 'patient-medicine',
+    loadChildren: './module-160202053/patient-medicine/patient-medicine.module#PatientMedicinePageModule'
+  }
+
 
 ];
 
