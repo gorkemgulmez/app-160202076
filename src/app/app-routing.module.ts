@@ -25,15 +25,15 @@ const routes: Routes = [
   },
   {
     path: 'randevu',
-    loadChildren: './module-160202076/randevu.module#RandevuModule'
+    loadChildren: './randevu/randevu.module#RandevuModule'
   },
   {
     path: 'prescribe',
-    loadChildren: './module-160202053/prescribe/prescribe.module#PrescribePageModule'
+    loadChildren: './prescribe/prescribe/prescribe.module#PrescribePageModule'
   },
   {
     path: 'patient-analysis',
-    loadChildren: './module-160202028/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
+    loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
   }
 
 
