@@ -28,7 +28,7 @@ import { RandevuModule } from './module-160202076/randevu.module';
     HttpClientModule,
     PortalModule,
     PlayerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     RandevuModule
   ],
   providers: [

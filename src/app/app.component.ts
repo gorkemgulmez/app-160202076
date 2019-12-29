@@ -36,14 +36,14 @@ export class AppComponent {
       icon: 'calendar'
     },
     {
-      title: 'İlaç Yaz',
+      title: 'İlaçlar',
       url: '/prescribe',
-      icon: 'calendar'
+      icon: 'medkit'
     },
     {
-      title: 'İlaçlarım',
-      url: '/patient-medicine',
-      icon: 'calendar'
+      title: 'Tahliller',
+      url: '/patient-analysis',
+      icon: 'clipboard'
     }
   ];
 

@@ -16,11 +16,11 @@ git clone --recurse-submodules -j8 https://github.com/2019-BLM441/app-160202076
 git pull --recurse-submodules
 
 **Commit**  
-cd your_submodule
-git add .
-git commit -a -m "commit in submodule"
-git push
+cd your_submodule  
+git add .  
+git commit -a -m "commit in submodule"  
+git push  
 
-cd ../../..
-git add your_submodule
-git commit -m "Updated submodule"
+cd ../../..  
+git add your_submodule  
+git commit -m "Updated submodule"  

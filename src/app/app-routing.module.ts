@@ -27,11 +27,13 @@ const routes: Routes = [
     path: 'randevu',
     loadChildren: './module-160202076/randevu.module#RandevuModule'
   },
-  { path: 'prescribe',
+  {
+    path: 'prescribe',
     loadChildren: './module-160202053/prescribe/prescribe.module#PrescribePageModule'
   },
-  { path: 'patient-medicine',
-    loadChildren: './module-160202053/patient-medicine/patient-medicine.module#PatientMedicinePageModule'
+  {
+    path: 'patient-analysis',
+    loadChildren: './module-160202028/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
   }
 
 
