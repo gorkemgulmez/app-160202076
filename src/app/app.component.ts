@@ -44,6 +44,11 @@ export class AppComponent {
       title: 'Tahliller',
       url: '/patient-analysis',
       icon: 'clipboard'
+    },
+    { 
+      title: 'Ameliyat',
+      url: '/ameliyat',
+      icon: 'people'
     }
   ];
 

@@ -25,7 +25,11 @@ const routes: Routes = [
   },
   {
     path: 'randevu',
-    loadChildren: './randevu/randevu.module#RandevuModule'
+    loadChildren: './randevu/randevu/randevu.module#RandevuPageModule'
+  },
+  {
+    path: 'randevu/add',
+    loadChildren: './randevu/add/add.module#AddPageModule'
   },
   {
     path: 'prescribe',
@@ -34,7 +38,13 @@ const routes: Routes = [
   {
     path: 'patient-analysis',
     loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
-  }
+  },
+  {
+    path: 'ameliyat',
+    loadChildren: './ameliyat/ameliyat/ameliyat.module#AmeliyatPageModule'
+  },
+ { path: 'ameliyat/add',
+    loadChildren: './ameliyat/add/add.module#AddPageModule'}
 
 
 ];
