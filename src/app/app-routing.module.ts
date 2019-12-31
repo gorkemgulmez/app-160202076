@@ -40,6 +40,14 @@ const routes: Routes = [
     loadChildren: './prescribe/prescribe/prescribe.module#PrescribePageModule'
   },
   {
+    path: 'patient-medicine',
+    loadChildren: './prescribe/patient-medicine/patient-medicine.module#PatientMedicinePageModule'
+  },
+  {
+    path: 'add-analysis',
+    loadChildren: './analysis/add-analysis/add-analysis.module#AddAnalysisPageModule'
+  },
+  {
     path: 'patient-analysis',
     loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
   },

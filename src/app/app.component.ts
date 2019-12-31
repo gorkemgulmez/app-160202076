@@ -36,12 +36,22 @@ export class AppComponent {
       icon: 'calendar'
     },
     {
-      title: 'İlaçlar',
+      title: 'İlaç İşlemleri',
       url: '/prescribe',
       icon: 'medkit'
     },
     {
-      title: 'Tahliller',
+      title: 'İlaçlarım',
+      url: '/patient-medicine',
+      icon: 'medkit'
+    },
+    {
+      title: 'Tahlil İşlemleri',
+      url: '/add-analysis',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Tahlillerim',
       url: '/patient-analysis',
       icon: 'clipboard'
     },
