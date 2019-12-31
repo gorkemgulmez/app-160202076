@@ -32,6 +32,10 @@ const routes: Routes = [
     loadChildren: './randevu/add/add.module#AddPageModule'
   },
   {
+    path: 'randevu/update/:id',
+    loadChildren: './randevu/update/update.module#UpdatePageModule'
+  },
+  {
     path: 'prescribe',
     loadChildren: './prescribe/prescribe/prescribe.module#PrescribePageModule'
   },
