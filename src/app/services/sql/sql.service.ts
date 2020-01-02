@@ -50,6 +50,7 @@ export class SQLService {
       const open = await window.openDatabase(DB_NAME, '1.0', 'Portal DB', 5 * 1024 * 1024);
       this.db = webDB(open);
     }
+    this.importSQL(DB_PATH);
     await this.storage.get('db').then(status => {
       if (status) {
         this.dbReady.next(true);
