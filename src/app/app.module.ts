@@ -15,6 +15,10 @@ import { PortalModule } from './portal/portal.module';
 import { PlayerModule } from "./player/player.module";
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +31,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     PortalModule,
     PlayerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [
     StatusBar,

@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBmhtAl3_DwDFXI54TNhKOKmoAxMaVRNJE",
+    authDomain: "hastane-sistemi.firebaseapp.com",
+    databaseURL: "https://hastane-sistemi.firebaseio.com",
+    projectId: "hastane-sistemi",
+    storageBucket: "hastane-sistemi.appspot.com",
+    messagingSenderId: "394766060724"
+    /*
+    appId: "1:394766060724:web:a6de5e425a27b4452a1be1",
+    measurementId: "G-8QT17DZE9C"
+    */  
+  }
+  
 };
 
 /*
