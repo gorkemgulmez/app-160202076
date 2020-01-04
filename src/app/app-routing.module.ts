@@ -24,15 +24,15 @@ const routes: Routes = [
     loadChildren: './player/player.module#PlayerModule'
   },
   {
-    path: 'randevu',
+    path: 'appointment',
     loadChildren: './randevu/randevu/randevu.module#RandevuPageModule'
   },
   {
-    path: 'randevu/add',
+    path: 'appointment/add',
     loadChildren: './randevu/add/add.module#AddPageModule'
   },
   {
-    path: 'randevu/update/:id',
+    path: 'appointment/update/:id',
     loadChildren: './randevu/update/update.module#UpdatePageModule'
   },
   {

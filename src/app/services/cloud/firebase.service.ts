@@ -8,20 +8,27 @@ export class FirebaseService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  create_Appointment(appointment) {
-    return this.firestore.collection('appointments').add(appointment);
+  /*
+      db_name
+  * appointments -> randevu
+  * surgeons -> ameliyat
+  * medicines -> ilaçlar
+  * analyzes -> analiz
+  */
+  create(db_name, id, data) {
+    return this.firestore.collection(db_name).doc(id).set(data);
   }
  
-  read_Appointment() {
-    return this.firestore.collection('appointments').snapshotChanges();
+  read(db_name) {
+    return this.firestore.collection(db_name).snapshotChanges();
   }
  
-  update_Appointment(appointment_id, appointment){
-    this.firestore.doc('appointments/' + appointment_id).update(appointment);
+  update(db_name, id, data){
+    this.firestore.doc( db_name + '/' + id).update(data);
   }
  
-  delete_Appointment(appointment_id) {
-    this.firestore.doc('appointments/' + appointment_id).delete();
+  delete(db_name, id) {
+    this.firestore.doc( db_name + '/' + id).delete();
   }
   
 }

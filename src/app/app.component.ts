@@ -11,11 +11,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Ana Sayfa',
       url: '/home',
       icon: 'home'
     },
-    {
+    /*{
       title: 'List',
       url: '/list',
       icon: 'list'
@@ -29,10 +29,10 @@ export class AppComponent {
       title: 'Player',
       url: '/player',
       icon: 'musical-notes'
-    },
+    },*/
     {
       title: 'Randevu',
-      url: '/randevu',
+      url: '/appointment',
       icon: 'calendar'
     },
     {
@@ -56,8 +56,13 @@ export class AppComponent {
       icon: 'clipboard'
     },
     { 
-      title: 'Ameliyat',
+      title: 'Ameliyatlarım',
       url: '/ameliyat',
+      icon: 'people'
+    },
+    {
+      title: 'Ameliyat Ekle',
+      url: '/ameliyat/add',
       icon: 'people'
     }
   ];
