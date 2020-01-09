@@ -34,6 +34,8 @@ Ameliyat modülünde hasta olacağı ameliyatı ameliyatlarım sayfasından taki
 **İlaç Modülü**  
 İlaç modülünde hasta doktorun onun için yazdığı ilaçları ilaçlarım sayfasından takip edebilir.İlacı verecek olan doktor yeni ilaç ekleyebilir, eklenen ilacı silebilir veya güncelleyebilir.
 
-**Tahlil Modülü**
+**Tahlil Modülü**  
 Tahlil modülünde hasta yaptırdığı tahlillerin ne olduğunu tahlillerim ekranından takip edebilir. Doktor her bir hastası için istediği tahlilllerin sonuçlarını ve tahlilllerin türünü görebilir.Yeni tahlil istekleri oluşturabilir.
 
+**Doktor İzin Modülü**  
+Doktor bitiş ve başlangıç tarihi seçerek izin almak istediği günleri ekleyebilir ve bu günlerin ücretli izin mi yoksa ücretsiz izin mi olduğunu belirtebilir.
