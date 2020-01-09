@@ -19,21 +19,6 @@ export class AppComponent {
       url: '/home',
       icon: 'home'
     },
-    /*{
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Portal',
-      url: '/portal',
-      icon: 'grid'
-    },
-    {
-      title: 'Player',
-      url: '/player',
-      icon: 'musical-notes'
-    },*/
     {
       title: 'Randevu',
       url: '/appointment',
@@ -60,13 +45,8 @@ export class AppComponent {
       icon: 'clipboard'
     },
     {
-      title: 'Ameliyatlarım',
+      title: 'Ameliyatlar',
       url: '/ameliyat',
-      icon: 'people'
-    },
-    {
-      title: 'Ameliyat Ekle',
-      url: '/ameliyat/add',
       icon: 'people'
     }
   ];
