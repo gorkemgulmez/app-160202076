@@ -3,10 +3,10 @@
 |Öğrenci Adı|Numarası|
 |-----------|-----------|
 |Görkem Gülmez|160202076|
-|Ali Recep Karaca|1602020|
-|Kübra Cebbar|1602020|
-|Mehmet Fırat Kömürcü|1602020|
-|Cihangir İlyas Baştan|1602020|
+|Ali Recep Karaca|160202053|
+|Kübra Cebbar|160202025|
+|Mehmet Fırat Kömürcü|160202028|
+|Cihangir İlyas Baştan|160202019|
 
 ### Git komutları
 **Clone**  
@@ -24,3 +24,6 @@ git push
 cd ../../..  
 git add your_submodule  
 git commit -m "Updated submodule"  
+
+** randevu  modülü**
+Randevu modülünde hasta klinik,doktor ve saat seçerek randevu alabilir.Daha sonra alınan randevuyu değiştirebilir veya silebilir.Hasta randevularını randevularım sayfasından görüntüleyebilir.
