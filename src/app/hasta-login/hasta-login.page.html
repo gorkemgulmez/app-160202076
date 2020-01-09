@@ -1,0 +1,17 @@
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Hasta T.C. No</ion-label>
+      <ion-input [(ngModel)]="hasta_tc" type="username" name="hasta_tc" maxLength=11></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Şifre</ion-label>
+      <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+    <ion-button type="submit" expand="full" color="primary" (click)="login()" >Giriş Yap</ion-button>
+  <p text-center>Eğer Hesabınız Yoksa</p>
+  <ion-button expand="full" color="danger" routerLink="/register-hasta">Kayıt Olun</ion-button>
+</ion-content>

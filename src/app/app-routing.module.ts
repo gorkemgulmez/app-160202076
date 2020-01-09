@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -25,15 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'appointment',
-    loadChildren: './randevu/randevu/randevu.module#RandevuPageModule'
-  },
-  {
-    path: 'appointment/add',
-    loadChildren: './randevu/add/add.module#AddPageModule'
-  },
-  {
-    path: 'appointment/update/:id',
-    loadChildren: './randevu/update/update.module#UpdatePageModule'
+    loadChildren: './randevu/randevu.module#RandevuModule'
   },
   {
     path: 'prescribe',
@@ -55,10 +48,28 @@ const routes: Routes = [
     path: 'ameliyat',
     loadChildren: './ameliyat/ameliyat/ameliyat.module#AmeliyatPageModule'
   },
- { path: 'ameliyat/add',
-    loadChildren: './ameliyat/add/add.module#AddPageModule'}
-
-
+  {
+    path: 'ameliyat/add',
+    loadChildren: './ameliyat/add/add.module#AddPageModule'
+  },
+  
+  //Login-Register modülleri ayrı ayrı yazılmıştır
+  {
+    path:'login-doctor',
+    loadChildren: './doktor-login/doktor-login.module#DoktorLoginPageModule'
+  },
+  {
+    path:'register-doctor',
+    loadChildren: './doktor-register/doktor-register.module#DoktorRegisterPageModule'
+  },
+  {
+    path:'login-hasta',
+    loadChildren: './hasta-login/hasta-login.module#HastaLoginPageModule'
+  },
+  {
+    path:'register-hasta',
+    loadChildren: './hasta-register/hasta-register.module#HastaRegisterPageModule'
+  },
 ];
 
 @NgModule({

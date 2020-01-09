@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SQLService } from '../services/sql/sql.service';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Component({
   selector: 'app-home',
@@ -10,20 +11,19 @@ export class HomePage {
 
   portals = [];
 
-  constructor(private sqlService: SQLService) { 
-    this.sqlService.getDbState().subscribe(ready => {
-      if (ready) {
-        this.getPortals();
-      }
-    });
+  constructor(private sqlService: SQLService,
+    private authGuard: AuthGuard) { }
+
+  isAuthenticated() {
+    return this.authGuard.canActivate(null, null);
   }
 
-  getPortals() {
-    this.sqlService.db.executeSql('SELECT * FROM portal').then((rs: any) => {
-      this.sqlService.asArray(rs).then((list) => {
-        this.portals = list;
-        console.log(this.portals);
-      });
-    });
+  isPatient() {
+    return this.authGuard.isPatient();
   }
+
+  isDoctor() {
+    return this.authGuard.isDoctor()
+  }
+
 }

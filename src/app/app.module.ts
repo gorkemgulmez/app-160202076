@@ -19,6 +19,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { RandevuModule } from './randevu/randevu.module';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,10 +34,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     PortalModule,
     PlayerModule,
     ReactiveFormsModule,
+    RandevuModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule.enablePersistence(),
+
+    AngularFireAuthModule,
   ],
   providers: [
     StatusBar,

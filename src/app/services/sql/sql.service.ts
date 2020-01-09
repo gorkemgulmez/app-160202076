@@ -5,6 +5,7 @@ import { webDB } from './sql.web';
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
+import { FirebaseService } from '../cloud/firebase.service';
 
 declare var window: any;
 const DB_NAME = 'portal.db';
@@ -19,12 +20,14 @@ export class SQLService {
   private dbReady: BehaviorSubject<boolean>;
 
   constructor(
-    public sqlite: SQLite, 
-    private platform: Platform, 
+    public sqlite: SQLite,
+    private platform: Platform,
     private http: HttpClient,
-    private storage: Storage
-    ) {
+    private storage: Storage,
+    private firebaseService: FirebaseService
+  ) {
     this.init();
+    //this.getInfo();
   }
 
   async asArray(data) {
@@ -51,6 +54,7 @@ export class SQLService {
       this.db = webDB(open);
     }
     this.importSQL(DB_PATH);
+
     await this.storage.get('db').then(status => {
       if (status) {
         this.dbReady.next(true);
@@ -64,9 +68,9 @@ export class SQLService {
     console.log('SQL file imported');
     this.http.get(path, { responseType: 'text' })
       .subscribe(sql => {
-        sql = sql.replace(/[\n\r]/gm,''); 
+        sql = sql.replace(/[\n\r]/gm, '');
         const batch = sql.split(';');
-        if(batch[batch.length-1] === ""){
+        if (batch[batch.length - 1] === "") {
           batch.pop();
         }
         console.log(JSON.stringify(batch));
@@ -80,4 +84,7 @@ export class SQLService {
   getDbState() {
     return this.dbReady.asObservable();
   }
+
+  
+
 }

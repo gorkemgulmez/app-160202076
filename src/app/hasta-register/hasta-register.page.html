@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Hasta Kayıt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">T.C Kimlik Numarasi</ion-label>
+      <ion-input type="text" [(ngModel)]="hasta_tc" minLength=11 maxLength=11></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Şifre</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Şifre Onay</ion-label>
+      <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Adı</ion-label>
+      <ion-input type="text" [(ngModel)]="hasta_ad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Soyadı</ion-label>
+      <ion-input type="text" [(ngModel)]="hasta_soyad"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button fill="solid" expand="block" color="dark" (click)="register()">Kayıt Ol</ion-button>
+</ion-content>

@@ -4,11 +4,68 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Özel Özyakın Hastanesi
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-button routerLink="/portal">Go Portal</ion-button>
+  <ion-item>
+    <ion-label>Hastane Randevu Sistemine Hoşgeldiniz</ion-label>
+  </ion-item>
+
+  <div *ngIf="!isAuthenticated()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Üyeliğiniz Varsa Hasta Girişi</ion-card-subtitle>
+        <ion-card-title>
+          <ion-button routerLink="/login-hasta">Giriş Yapın</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Üyeliğiniz Yoksa Yeni Üyelik</ion-card-subtitle>
+        <ion-card-title>
+          <ion-button routerLink="/register-hasta">Üye Olun</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Doktorlar İçin Giriş Sistemi</ion-card-subtitle>
+        <ion-card-title>
+          <ion-button routerLink="/login-doctor">Doktor Giriş Sistemi</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Yeni Doktor Kimliği Oluşturma</ion-card-subtitle>
+        <ion-card-title>
+          <ion-button routerLink="/register-doctor">Doktor Kimliği Oluştur</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div *ngIf="isPatient()">
+    <ion-button color="primary">Randevu Al</ion-button>
+    <ion-button color="primary">İlaçlarımı Gör</ion-button>
+    <ion-button color="primary">Tahlillerimi Gör</ion-button>
+    <ion-button color="primary">Ameliyatlarını Gör</ion-button>
+  </div>
+
+  <div *ngIf="isDoctor()">
+    <!-- Doktor girişi-->
+    <ion-button color="primary">Randevularımı Gör</ion-button>
+    <ion-button color="primary">Recete Oluştur</ion-button>
+    <ion-button color="primary">Tahlil Sonucu Oluştur</ion-button>
+    <ion-button color="primary">Ameliyat Oluştur</ion-button>
+    <!-- Doktor girişi-->
+  </div>
+
 </ion-content>
