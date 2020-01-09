@@ -38,6 +38,10 @@ export class AuthGuard implements CanActivate {
     });
   }
 
+  getUserId() {
+    return this.strorage.get('USER_ID')
+  }
+
   login(id: string): void {
     this.strorage.set('USER_ID', id).then((response) => {
       this.authState = true;

@@ -46,11 +46,7 @@ const routes: Routes = [
   },
   {
     path: 'ameliyat',
-    loadChildren: './ameliyat/ameliyat/ameliyat.module#AmeliyatPageModule'
-  },
-  {
-    path: 'ameliyat/add',
-    loadChildren: './ameliyat/add/add.module#AddPageModule'
+    loadChildren: './surgeon/surgeon.module#SurgeonModule'
   },
   
   //Login-Register modülleri ayrı ayrı yazılmıştır
