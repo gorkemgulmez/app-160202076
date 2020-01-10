@@ -13,20 +13,16 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
-  {
-    path: 'portal',
-    loadChildren: './portal/portal.module#PortalModule'
-  },
-  {
-    path: 'player',
-    loadChildren: './player/player.module#PlayerModule'
-  },
-  {
     path: 'appointment',
     loadChildren: './randevu/randevu.module#RandevuModule'
+  },
+  {
+    path: 'ameliyat',
+    loadChildren: './surgeon/surgeon.module#SurgeonModule'
+  },
+  {
+    path: 'vacation',
+    loadChildren: './doctor_vacation/doctor_vacation.module#DoctorVacationModule'
   },
   {
     path: 'prescribe',
@@ -43,12 +39,7 @@ const routes: Routes = [
   {
     path: 'patient-analysis',
     loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
-  },/*
-  {
-    path: 'ameliyat',
-    loadChildren: './surgeon/surgeon.module#SurgeonModule'
-  },*/
-  
+  },
   //Login-Register modülleri ayrı ayrı yazılmıştır
   {
     path:'login-doctor',

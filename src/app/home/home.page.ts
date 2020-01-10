@@ -26,4 +26,8 @@ export class HomePage {
     return this.authGuard.isDoctor()
   }
 
+  logout() {
+    this.authGuard.logout();
+  }
+
 }

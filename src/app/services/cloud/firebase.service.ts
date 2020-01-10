@@ -16,7 +16,7 @@ export class FirebaseService {
   * analyzes -> analiz
   */
   create(db_name: string, id: string, data) {
-    //this.firestore.firestore.onSnapshotsInSync()
+    if(id=="") id = this.firestore.createId();
     return this.firestore.collection(db_name).doc(id).set(data);
   }
  

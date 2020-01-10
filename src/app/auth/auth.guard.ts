@@ -33,7 +33,12 @@ export class AuthGuard implements CanActivate {
   ifLoggedIn() {
     this.strorage.get('USER_ID').then((response) => {
       if (response) {
+        console.log("response: " + response);
+        
         this.authState = true;
+        if (response.length < 11) {
+          this.doctorState = true;
+        }
       }
     });
   }
@@ -45,10 +50,9 @@ export class AuthGuard implements CanActivate {
   login(id: string): void {
     this.strorage.set('USER_ID', id).then((response) => {
       this.authState = true;
-      //if id is patient number
-      if (id.length == 11 && parseInt(id) != NaN) {
+      //if id is not patient number
+      if (id.length < 11) {
         this.doctorState = true;
-        this.authState = true;
       }
     });
   }

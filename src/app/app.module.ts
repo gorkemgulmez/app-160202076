@@ -11,8 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
-import { PortalModule } from './portal/portal.module';
-import { PlayerModule } from "./player/player.module";
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
@@ -21,7 +19,8 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RandevuModule } from './randevu/randevu.module';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-//import { SurgeonModule } from './surgeon/surgeon.module';
+import { SurgeonModule } from './surgeon/surgeon.module';
+import { DoctorVacationModule } from './doctor_vacation/doctor_vacation.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,11 +31,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule,
     IonicStorageModule.forRoot(),
     HttpClientModule,
-    PortalModule,
-    PlayerModule,
     ReactiveFormsModule,
     RandevuModule,
-    //SurgeonModule,
+    SurgeonModule,
+    DoctorVacationModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

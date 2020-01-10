@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { FirebaseService } from '../services/cloud/firebase.service';
 import { ToastController } from '@ionic/angular';
 import { SQLService } from '../services/sql/sql.service';
+import { Location } from '@angular/common';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Component({
 	selector: 'app-hasta-register',
@@ -20,7 +22,9 @@ export class HastaRegisterPage implements OnInit {
 		public router: Router,
 		private toastCtrl: ToastController,
 		private firebaseService: FirebaseService,
-		private sqlService: SQLService
+		private sqlService: SQLService,
+		private location: Location,
+		private authGuard: AuthGuard
 	) { }
 
 	ngOnInit() {
@@ -39,7 +43,8 @@ export class HastaRegisterPage implements OnInit {
 			this.hasta_tc = "";
 			this.password = "";
 			console.log(resp);
-
+			this.authGuard.login(this.hasta_tc);
+			this.location.back();
 		})
 			.catch(error => {
 				console.log(error);

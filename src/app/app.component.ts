@@ -19,21 +19,6 @@ export class AppComponent {
       url: '/home',
       icon: 'home'
     },
-    /*{
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Portal',
-      url: '/portal',
-      icon: 'grid'
-    },
-    {
-      title: 'Player',
-      url: '/player',
-      icon: 'musical-notes'
-    },*/
     {
       title: 'Randevu',
       url: '/appointment',
@@ -60,14 +45,14 @@ export class AppComponent {
       icon: 'clipboard'
     },
     {
-      title: 'Ameliyatlarım',
+      title: 'Ameliyatlar',
       url: '/ameliyat',
       icon: 'people'
     },
     {
-      title: 'Ameliyat Ekle',
-      url: '/ameliyat/add',
-      icon: 'people'
+      title: 'İzin İşlemleri',
+      url: 'vacation',
+      icon: 'bed'
     }
   ];
 
@@ -117,6 +102,7 @@ export class AppComponent {
           this.insert(sql);
         });
       });
+
       /*this.firebaseService.read('analyzes').subscribe(result => {
         console.log(result);
         
@@ -127,23 +113,23 @@ export class AppComponent {
           console.log(sql);
           this.insert(sql);
         });
-      });
+      });*/
       this.firebaseService.read('doctor_vacations').subscribe(result => {
         console.log(result);
         
         result.forEach(el => {
           console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " +el.payload.doc.get('appointment_time'));
           
-          let sql = "INSERT INTO appointments (id, patient_id, doctor_id, appointment_time) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('appointment_time') + "')";
+          let sql = "INSERT INTO doctor_vacations (doctor_id, start_date, end_date) VALUES ('" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('start_date') + "', '" + el.payload.doc.get('end_date') + "')";
           console.log(sql);
           this.insert(sql);
         });
-      });*/
+      });
       this.firebaseService.read('medicines').subscribe(result => {
         console.log(result);
 
         result.forEach(el => {
-          console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " + el.payload.doc.get('medicine_name') + " " + el.payload.doc.get("description"));
+          console.log(el.payload.doc.id + " " + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id') + " " + el.payload.doc.get('medicine_name') + " " + el.payload.doc.get("description"));
 
           var sql = 'INSERT INTO medicines (id, patient_id,doctor_id,medicine_name,description) VALUES (\'' + el.payload.doc.id + '\',\'' + el.payload.doc.get('patient_id')
               + '\',\'' + el.payload.doc.get('doctor_id') + '\', \'' + el.payload.doc.get('medicine_name') + '\', \''
@@ -152,22 +138,15 @@ export class AppComponent {
           console.log(sql);
           this.insert(sql);
         });
-      });/*
+      });
       this.firebaseService.read('surgeons').subscribe(result => {
-        console.log(result);
-        
         result.forEach(el => {
-          console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " +el.payload.doc.get('appointment_time'));
-          
-          let sql = "INSERT INTO appointments (id, patient_id, doctor_id, appointment_time) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('appointment_time') + "')";
+          let sql = "INSERT INTO surgeons (id, patient_id, doctor_id, surgeon_time, surgeon_place) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('surgeon_time') +  "', '" + el.payload.doc.get('surgeon_place') +"')";
           console.log(sql);
           this.insert(sql);
         });
-      });*/
-      
+      });
     });
-
-    
   }
 
   private insert(sql: String) {
