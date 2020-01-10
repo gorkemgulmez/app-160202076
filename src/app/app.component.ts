@@ -103,6 +103,21 @@ export class AppComponent {
         });
       });
 
+      this.firebaseService.read('analyzes').subscribe(result => {
+        console.log(result);
+
+        result.forEach(el => {
+          console.log(el.payload.doc.id + " " + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id') + " " + el.payload.doc.get('analysis_name') + " " + el.payload.doc.get("description"));
+
+          var sql = 'INSERT INTO analyzes (id, patient_id,doctor_id,analysis_name,description) VALUES (\'' + el.payload.doc.id + '\',\'' + el.payload.doc.get('patient_id')
+              + '\',\'' + el.payload.doc.get('doctor_id') + '\', \'' + el.payload.doc.get('analysis_name') + '\', \''
+              + el.payload.doc.get('description') + '\')';
+
+          console.log(sql);
+          this.insert(sql);
+        });
+      });
+
       /*this.firebaseService.read('analyzes').subscribe(result => {
         console.log(result);
         
