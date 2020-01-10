@@ -41,10 +41,10 @@ export class DoktorLoginPage implements OnInit {
 	}
 
 	loginAccount() {
-		let sql: String = 'SELECT * FROM doctors WHERE username= ' + this.username + ' and d_password= ' + this.password;
+		let sql: String = 'SELECT * FROM doctors WHERE username = ? and d_password = ? ';
 		console.log("log");
 
-		this.sqlService.db.executeSql(sql, []).then((rs: any) => {
+		this.sqlService.db.executeSql(sql, [this.username, this.password]).then((rs: any) => {
 			console.log(rs);
 
 			this.sqlService.asArray(rs).then((list) => {

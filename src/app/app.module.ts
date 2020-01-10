@@ -11,8 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
-import { PortalModule } from './portal/portal.module';
-import { PlayerModule } from "./player/player.module";
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
@@ -32,8 +30,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule,
     IonicStorageModule.forRoot(),
     HttpClientModule,
-    PortalModule,
-    PlayerModule,
     ReactiveFormsModule,
     RandevuModule,
     //SurgeonModule,
