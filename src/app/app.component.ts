@@ -118,18 +118,21 @@ export class AppComponent {
           console.log(sql);
           this.insert(sql);
         });
-      });
+      });*/
       this.firebaseService.read('medicines').subscribe(result => {
         console.log(result);
-        
+
         result.forEach(el => {
-          console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " +el.payload.doc.get('appointment_time'));
-          
-          let sql = "INSERT INTO appointments (id, patient_id, doctor_id, appointment_time) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('appointment_time') + "')";
+          console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " + el.payload.doc.get('medicine_name') + " " + el.payload.doc.get("description"));
+
+          var sql = 'INSERT INTO medicines (id, patient_id,doctor_id,medicine_name,description) VALUES (\'' + el.payload.doc.id + '\',\'' + el.payload.doc.get('patient_id')
+              + '\',\'' + el.payload.doc.get('doctor_id') + '\', \'' + el.payload.doc.get('medicine_name') + '\', \''
+              + el.payload.doc.get('description') + '\')';
+
           console.log(sql);
           this.insert(sql);
         });
-      });
+      });;/*
       this.firebaseService.read('surgeons').subscribe(result => {
         console.log(result);
         

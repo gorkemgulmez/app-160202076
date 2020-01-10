@@ -43,11 +43,11 @@ const routes: Routes = [
   {
     path: 'patient-analysis',
     loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
-  },
+  },/*
   {
     path: 'ameliyat',
     loadChildren: './surgeon/surgeon.module#SurgeonModule'
-  },
+  },*/
   
   //Login-Register modülleri ayrı ayrı yazılmıştır
   {

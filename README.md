@@ -3,10 +3,10 @@
 |Öğrenci Adı|Numarası|
 |-----------|-----------|
 |Görkem Gülmez|160202076|
-|Ali Recep Karaca|1602020|
-|Kübra Cebbar|1602020|
-|Mehmet Fırat Kömürcü|1602020|
-|Cihangir İlyas Baştan|1602020|
+|Ali Recep Karaca|160202053|
+|Kübra Cebbar|160202025|
+|Mehmet Fırat Kömürcü|160202028|
+|Cihangir İlyas Baştan|160202019|
 
 ### Git komutları
 **Clone**  
@@ -24,3 +24,18 @@ git push
 cd ../../..  
 git add your_submodule  
 git commit -m "Updated submodule"  
+
+**Randevu  Modülü**  
+Randevu modülünde hasta klinik,doktor ve saat seçerek randevu alabilir.Daha sonra alınan randevuyu değiştirebilir veya silebilir.Hasta randevularını randevularım sayfasından görüntüleyebilir.
+
+**Ameliyat Modulü**  
+Ameliyat modülünde hasta olacağı ameliyatı ameliyatlarım sayfasından takip edebilir. Ameliyatı yapacak doktor ameliyatlarını ekleyebilir,silebilir,güncelleyebilir veya kayıt edilen amliyatları listeleyebilir.
+
+**İlaç Modülü**  
+İlaç modülünde hasta doktorun onun için yazdığı ilaçları ilaçlarım sayfasından takip edebilir.İlacı verecek olan doktor yeni ilaç ekleyebilir, eklenen ilacı silebilir veya güncelleyebilir.
+
+**Tahlil Modülü**  
+Tahlil modülünde hasta yaptırdığı tahlillerin ne olduğunu tahlillerim ekranından takip edebilir. Doktor her bir hastası için istediği tahlilllerin sonuçlarını ve tahlilllerin türünü görebilir.Yeni tahlil istekleri oluşturabilir.
+
+**Doktor İzin Modülü**  
+Doktor bitiş ve başlangıç tarihi seçerek izin almak istediği günleri ekleyebilir ve bu günlerin ücretli izin mi yoksa ücretsiz izin mi olduğunu belirtebilir.
