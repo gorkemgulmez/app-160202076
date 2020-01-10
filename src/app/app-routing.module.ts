@@ -13,18 +13,6 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
-  {
-    path: 'portal',
-    loadChildren: './portal/portal.module#PortalModule'
-  },
-  {
-    path: 'player',
-    loadChildren: './player/player.module#PlayerModule'
-  },
-  {
     path: 'appointment',
     loadChildren: './randevu/randevu.module#RandevuModule'
   },
