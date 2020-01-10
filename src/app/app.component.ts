@@ -132,18 +132,18 @@ export class AppComponent {
           console.log(sql);
           this.insert(sql);
         });
-      });;/*
+      });;
       this.firebaseService.read('surgeons').subscribe(result => {
         console.log(result);
         
         result.forEach(el => {
           console.log(el.payload.doc.id + " "  + el.payload.doc.get('patient_id') + " " + el.payload.doc.get('doctor_id')  + " " +el.payload.doc.get('appointment_time'));
           
-          let sql = "INSERT INTO appointments (id, patient_id, doctor_id, appointment_time) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('appointment_time') + "')";
+          let sql = "INSERT INTO surgeons (id, patient_id, doctor_id, surgeon_time, surgeon_place) VALUES ('" + el.payload.doc.id + "', '" + el.payload.doc.get('patient_id') + "', '" + el.payload.doc.get('doctor_id') + "', '" + el.payload.doc.get('surgeon_time') +  "', '" + el.payload.doc.get('surgeon_place') +"')";
           console.log(sql);
           this.insert(sql);
         });
-      });*/
+      });
       
     });
 

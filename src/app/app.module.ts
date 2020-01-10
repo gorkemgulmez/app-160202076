@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RandevuModule } from './randevu/randevu.module';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-//import { SurgeonModule } from './surgeon/surgeon.module';
+import { SurgeonModule } from './surgeon/surgeon.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,7 +32,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     HttpClientModule,
     ReactiveFormsModule,
     RandevuModule,
-    //SurgeonModule,
+    SurgeonModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

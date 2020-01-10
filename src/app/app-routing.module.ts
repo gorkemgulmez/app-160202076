@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: './randevu/randevu.module#RandevuModule'
   },
   {
+    path: 'ameliyat',
+    loadChildren: './surgeon/surgeon.module#SurgeonModule'
+  },
+  {
     path: 'prescribe',
     loadChildren: './prescribe/prescribe/prescribe.module#PrescribePageModule'
   },
@@ -31,12 +35,7 @@ const routes: Routes = [
   {
     path: 'patient-analysis',
     loadChildren: './analysis/patient-analysis/patient-analysis.module#PatientAnalysisPageModule'
-  },/*
-  {
-    path: 'ameliyat',
-    loadChildren: './surgeon/surgeon.module#SurgeonModule'
-  },*/
-  
+  },
   //Login-Register modülleri ayrı ayrı yazılmıştır
   {
     path:'login-doctor',

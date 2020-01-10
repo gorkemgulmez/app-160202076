@@ -30,7 +30,6 @@ export class DoktorLoginPage implements OnInit {
 	ngOnInit() { }
 
 	async login() {
-		this.location.back();
 		const { username, password } = this
 		if (username == "" || password == "") {
 			this.presentToast('Alanlar Doldurulmalı')
@@ -41,15 +40,12 @@ export class DoktorLoginPage implements OnInit {
 	}
 
 	loginAccount() {
-		let sql: String = 'SELECT * FROM doctors WHERE username = ? and d_password = ? ';
+		let sql: String = 'SELECT username FROM doctors WHERE doctors.username= ' + this.username + ' and doctors.d_password= ' + this.password;
 		console.log("log");
 
-		this.sqlService.db.executeSql(sql, [this.username, this.password]).then((rs: any) => {
-			console.log(rs);
-
+		this.sqlService.db.executeSql(sql, {}).then((rs: any, st) => {
 			this.sqlService.asArray(rs).then((list) => {
 				console.log(list);
-
 				if (list.length > 0) {
 					console.log("name : " + this.username);
 					

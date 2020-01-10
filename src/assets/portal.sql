@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS patients (tc_no VARCHAR(11) PRIMARY KEY, patient_name
 CREATE TABLE IF NOT EXISTS appointments (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, appointment_time TIME);
 CREATE TABLE IF NOT EXISTS medicines (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, medicine_name TEXT, description TEXT);
 CREATE TABLE IF NOT EXISTS analyzes (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, analysis_name TEXT, description TEXT);
-CREATE TABLE IF NOT EXISTS surgeons (id INTEGER PRIMARY KEY AUTOINCREMENT, doctor_id INTEGER, patient_id INTEGER, surgeon_type TEXT, surgeon_time TIME);
+CREATE TABLE IF NOT EXISTS surgeons (id INTEGER PRIMARY KEY AUTOINCREMENT, doctor_id INTEGER, patient_id INTEGER, surgeon_place TEXT, surgeon_time TIME);
 CREATE TABLE IF NOT EXISTS doctor_vacations (doctor_id INTEGER, start_date datetime, end_date datetime, vacation_type TEXT);
