@@ -7,7 +7,7 @@
 [submodule "src/app/analysis"]
 	path = src/app/analysis
 	url = https://github.com/2019-BLM441/module-160202028
-[submodule "src/app/ameliyat"]
+[submodule "src/app/surgeon"]
 	path = src/app/surgeon
 	url = https://www.github.com/2019-BLM441/module-160202025.git
 [submodule "src/app/doctor_vacation"]
