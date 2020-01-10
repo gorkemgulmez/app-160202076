@@ -57,6 +57,7 @@
     <ion-button color="primary">İlaçlarımı Gör</ion-button>
     <ion-button color="primary">Tahlillerimi Gör</ion-button>
     <ion-button color="primary">Ameliyatlarını Gör</ion-button>
+    <ion-button color="primary" (click)="logout()">Çıkış Yap</ion-button>
   </div>
 
   <div *ngIf="isDoctor()">
@@ -65,6 +66,7 @@
     <ion-button color="primary">Recete Oluştur</ion-button>
     <ion-button color="primary">Tahlil Sonucu Oluştur</ion-button>
     <ion-button color="primary">Ameliyat Oluştur</ion-button>
+    <ion-button color="primary" (click)="logout()">Çıkış Yap</ion-button>
     <!-- Doktor girişi-->
   </div>
 

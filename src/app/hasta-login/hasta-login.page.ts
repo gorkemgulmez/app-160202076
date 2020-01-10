@@ -6,6 +6,8 @@ import { Route } from '@angular/compiler/src/core';
 import { ModalController, ToastController } from '@ionic/angular';
 import { FirebaseService } from '../services/cloud/firebase.service';
 import { SQLService } from '../services/sql/sql.service';
+import { Location } from '@angular/common';
+import { AuthGuard } from '../auth/auth.guard';
 
 @Component({
 	selector: 'app-hasta-login',
@@ -21,7 +23,9 @@ export class HastaLoginPage implements OnInit {
 		private router: Router,
 		private toastCtrl: ToastController,
 		private firebaseService: FirebaseService,
-		private sqlService: SQLService
+		private sqlService: SQLService,
+		private location: Location,
+		private authGuard: AuthGuard
 	) {
 		this.sqlService.getDbState().subscribe(ready => {
 			if(ready) {
@@ -57,7 +61,24 @@ export class HastaLoginPage implements OnInit {
 	}
 
 	loginAccount() {
+		let sql: String = 'SELECT * FROM patients WHERE tc_no= ' + this.hasta_tc + ' and p_password= ' + this.password;
+		console.log("log");
 		
+		this.sqlService.db.executeSql(sql, []).then((rs: any) => {
+			console.log(rs);
+			
+			this.sqlService.asArray(rs).then((list) => {
+				console.log(list);
+				
+				if(list.length>0) {
+					this.authGuard.login(this.hasta_tc);
+					this.location.back();
+				}
+				else {
+					this.presentToast("Hatalı Kullanıcı Adı veya Şifre")
+				}
+			})
+		})
 	}
 
 	async presentToast(message: string) {
