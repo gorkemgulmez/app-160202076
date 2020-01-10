@@ -20,6 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { RandevuModule } from './randevu/randevu.module';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SurgeonModule } from './surgeon/surgeon.module';
+import { DoctorVacationModule } from './doctor_vacation/doctor_vacation.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,6 +34,7 @@ import { SurgeonModule } from './surgeon/surgeon.module';
     ReactiveFormsModule,
     RandevuModule,
     SurgeonModule,
+    DoctorVacationModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

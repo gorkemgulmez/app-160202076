@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: './surgeon/surgeon.module#SurgeonModule'
   },
   {
+    path: 'vacation',
+    loadChildren: './doctor_vacation/doctor_vacation.module#DoctorVacationModule'
+  },
+  {
     path: 'prescribe',
     loadChildren: './prescribe/prescribe/prescribe.module#PrescribePageModule'
   },
