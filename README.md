@@ -74,8 +74,11 @@ Doktor bitiş ve başlangıç tarihi seçerek izin almak istediği günleri ekle
 __Doktor İzim Sistemi__
 
 
-![](ss/db_tabloları.png)   
+![](ss/db_tablolari.png)   
 __Modüller İçin Ayrı DB Tabloları (Firebase)__
+
+![](ss/fotograf_cekme_ekrani.png)   
+__Fotoğraf Çekme Ekranı__
 
 ### Git komutları
 **Clone**  
