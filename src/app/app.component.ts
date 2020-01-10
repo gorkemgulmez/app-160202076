@@ -102,6 +102,7 @@ export class AppComponent {
           this.insert(sql);
         });
       });
+
       /*this.firebaseService.read('analyzes').subscribe(result => {
         console.log(result);
         

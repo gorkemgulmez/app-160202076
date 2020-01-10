@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS doctor_vacations;
 CREATE TABLE IF NOT EXISTS clinics (id INTEGER PRIMARY KEY AUTOINCREMENT, clinic_name TEXT);
 CREATE TABLE IF NOT EXISTS doctors (doctor_name TEXT, clinic_id INTEGER, username TEXT, d_password TEXT);
 CREATE TABLE IF NOT EXISTS patients (tc_no VARCHAR(11) PRIMARY KEY, patient_name TEXT, p_password TEXT);
-CREATE TABLE IF NOT EXISTS appointments (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, appointment_time TIME);
+CREATE TABLE IF NOT EXISTS appointments (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id TEXT, appointment_time TIME);
 CREATE TABLE IF NOT EXISTS medicines (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, medicine_name TEXT, description TEXT);
 CREATE TABLE IF NOT EXISTS analyzes (id INTEGER PRIMARY KEY AUTOINCREMENT, patient_id INTEGER, doctor_id INTEGER, analysis_name TEXT, description TEXT);
 CREATE TABLE IF NOT EXISTS surgeons (id INTEGER PRIMARY KEY AUTOINCREMENT, doctor_id INTEGER, patient_id INTEGER, surgeon_place TEXT, surgeon_time TIME);
