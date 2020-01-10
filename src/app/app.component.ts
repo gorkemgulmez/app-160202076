@@ -152,7 +152,7 @@ export class AppComponent {
           console.log(sql);
           this.insert(sql);
         });
-      });;/*
+      });/*
       this.firebaseService.read('surgeons').subscribe(result => {
         console.log(result);
         
